@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --book_height: 200px;
+    --book_width: 130px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #d5c5ae;
+    font-family: "EB Garamond", sans-serif;
+}
+
+input, label{
+    font-family: "EB Garamond", sans-serif;
+    font-weight: 500;
+}
+
+.hook {
+    background-color: #b18653;
+    padding: 20px;
+    border: 2px solid #352819;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.newBook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.header, .newBook {
+    color: black;
+    text-shadow: 2px 1px 0px #bdb8b2;
+}
+
+button {
+    border: #352819 2px solid;
+    border-radius: 17px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+#openDialog {
+    padding: 10px 15px;
+}
+
+button:hover {
+    background-color: #c4a176;
+}
+
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; /* Adjust the width as needed */
+    padding: 40px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.askForInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+
+.input > label {
+    font-weight: 800;
+    margin: 1px;
+    font-size: 16px;
+}
+
+input {
+    border: 2px solid black;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+#error {
+    color: rgb(110, 39, 39);
+    font-size: 12px;
+    font-weight: 1000;
+}
+
+.add {
+    padding: 0px 15px;
+}
+
+.books {
+    margin: 20px;
+    width: 90vw;
+    display: grid;
+    grid-template: var(--book_height) / repeat(auto-fill, minmax(var(--book_width), 1fr));
+    grid-auto-rows: var(--book_height);
+    column-gap: 20px;
+    row-gap: 20px;
+    align-self: center;
+}
+
+.bookContainer {
+    background-color: #d3bda3;
+    border: 2px black solid;
+    border-radius: 2px;
+    padding-left: 10px;
+    box-shadow: 4px 4px 5px grey;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow: wrap;
+    width: 100%;
+}
+
+.bookStub {
+    position: absolute;
+    left: 0;
+    background-color: #352819;
+    height: calc(var(--book_height) - 3px);
+    width: 10px;
+}
+
+.bookContainer > h1 {
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: center;
+    width: calc(var(--book_width) - 12px);
+    overflow: wrap;
+}
+
+.unread, .read {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    width: 75px;
+    padding: 0px 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.unread {
+    background-color: red;
+}
+
+.read {
+    background-color: green;
+}
+
+.bookContainer > h3 {
+    font-size: 16px;
+    justify-self: flex-end;
+}
+
+.bookContainer > button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    padding: 2px 6px;
+}

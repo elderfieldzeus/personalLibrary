@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hook">
+        <div class="header">
+            <h1>Personal Library</h1>
+        </div>
+        <div class="newBook">
+            <h3>Want to add a book?</h3>
+            <button id="openDialog">New book!</button>
+        </div>
+    </div>
+
+    <dialog id="main">
+        <div class="askForInput">
+            <div class="title input">
+                <label for="title">Title</label>
+                <input type="text" id="title">
+            </div>
+            <div class="author input">
+                <label for="author">Author</label>
+                <input type="text" id="author">
+            </div>
+            <div class="date input">
+                <label for="date">Date Borrowed</label>
+                <input type="date" id="date">
+            </div>
+            <button class="add">ADD</button>
+            <p id="error"></p>
+        </div>
+    </dialog>
+
+    <div class="books">
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
